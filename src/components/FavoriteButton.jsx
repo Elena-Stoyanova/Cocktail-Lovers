@@ -36,7 +36,7 @@ const FavoriteButton = ({ id }) => {
       type='button'
       onClick={handleToggleFavorite}
     >
-      <img src={isFavorite ? '/cocktail-lovers/favorite-filled.svg' : '/cocktail-lovers/favorite.svg'} alt='' />
+      <img src={isFavorite ? '/favorite-filled.svg' : '/favorite.svg'} alt='' />
     </button>
   );
 };

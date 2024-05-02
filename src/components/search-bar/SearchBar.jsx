@@ -25,7 +25,7 @@ const SearchBar = ({
             onClick={() => setShowDropdown((prev) => !prev)}
           >
             {selectedFilterName}
-            <img src='/cocktail-lovers/dropdown.png' alt='' />
+            <img src='/dropdown.png' alt='' />
           </button>
           {showDropdown && (
             <div className='dropdownContent'>
@@ -63,7 +63,7 @@ const SearchBar = ({
           type='button'
           onClick={() => setSearchedText(searchText)}
         >
-          <img src='/cocktail-lovers/search.png' alt='' />
+          <img src='/search.png' alt='' />
         </button>
       </form>
     </div>

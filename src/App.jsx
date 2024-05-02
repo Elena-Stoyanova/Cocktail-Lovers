@@ -12,10 +12,10 @@ import { createContext } from 'react';
 export const AppContext = createContext(null);
 
 const App = () => {
-  const [playSound] = useSound('/cocktail-lovers/sound.mp3');
+  const [playSound] = useSound('sound.mp3');
 
   return (
-    <BrowserRouter basename={'/cocktail-lovers'}>
+    <BrowserRouter>
       <AppContext.Provider value={playSound}>
         <Header />
         <main>
