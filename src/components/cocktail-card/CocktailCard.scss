@@ -1,0 +1,73 @@
+@import '../../Mixins.scss';
+
+.cocktailCard {
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  transition: all 300ms;
+  position: relative;
+  overflow: hidden;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  .favoriteButton {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+    @include mobile {
+      top: 10px;
+    }
+  }
+
+  a {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    .imgContainer {
+      height: 200px;
+
+      img {
+        height: 100%;
+      }
+
+      @include mobile {
+        height: auto;
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    .textContainer {
+      width: 210px;
+      text-align: center;
+      padding: 20px;
+
+      p {
+        margin-top: 20px;
+      }
+
+      @include mobile {
+        position: relative;
+        width: auto;
+        padding-top: 35px;
+      }
+    }
+
+    @include mobile {
+      max-width: 235px;
+      flex-direction: column;
+    }
+  }
+}

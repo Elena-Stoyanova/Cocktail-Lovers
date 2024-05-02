@@ -1,0 +1,42 @@
+@import '../../Mixins.scss';
+
+header {
+  max-width: 100%;
+  max-height: 100px;
+  background-color: #fdd8b9;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+
+  nav {
+    display: flex;
+    gap: 60px;
+  }
+
+  a {
+    color: black;
+    transition: color 0.3s;
+
+    &:hover {
+      color: #b70e0c;
+    }
+  }
+
+  .active {
+    color: #b70e0c;
+  }
+
+  @include mobile {
+    padding-inline: 18px;
+
+    nav {
+      gap: 12px;
+      font-size: 15px;
+    }
+
+    img {
+      width: 80px;
+    }
+  }
+}

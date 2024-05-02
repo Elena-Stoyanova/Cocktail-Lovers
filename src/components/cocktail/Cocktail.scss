@@ -1,0 +1,99 @@
+@import '../../Mixins.scss';
+
+.cocktailContainer {
+  width: 100%;
+  min-height: calc(100vh - 170px);
+  display: flex;
+  margin: 50px 0;
+  padding-inline: 50px;
+  justify-content: center;
+  align-items: center;
+
+  .cocktail {
+    max-width: 1000px;
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    flex-direction: row;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    overflow: hidden;
+
+    .favoriteButton {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+
+      img {
+        width: 32px;
+        height: auto;
+      }
+    }
+
+    .imgContainer {
+      flex: 1;
+      padding-top: 46%;
+      position: relative;
+
+      img {
+        width: 100%;
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+      }
+    }
+
+    .textContainer {
+      flex: 1;
+      text-align: center;
+      font-size: 20px;
+      padding: 60px 30px 30px;
+
+      h2 {
+        margin-bottom: 20px;
+      }
+
+      .cocktailButton {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 8px;
+        background-color: rgb(253, 216, 185);
+        font-size: 16px;
+        margin-top: 30px;
+
+        &:hover {
+          background-color: rgb(255, 185, 139);
+        }
+      }
+    }
+  }
+
+  @include mobile {
+    padding: 0 20px;
+
+    .cocktail {
+      flex-direction: column;
+
+      .imgContainer {
+        padding: 0;
+
+        img {
+          position: static;
+        }
+      }
+
+      .textContainer {
+        position: relative;
+      }
+    }
+  }
+}
