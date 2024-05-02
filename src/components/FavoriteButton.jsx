@@ -15,9 +15,8 @@ const FavoriteButton = ({ id }) => {
   const handleToggleFavorite = (e) => {
     e.preventDefault();
 
-    const favoriteCocktailIds = JSON.parse(
-      localStorage.getItem('favoriteCocktailIds')
-    );
+    const favoriteCocktailIds =
+      JSON.parse(localStorage.getItem('favoriteCocktailIds')) || [];
 
     if (!isFavorite) {
       const addId = [...favoriteCocktailIds, id];
